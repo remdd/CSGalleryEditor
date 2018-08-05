@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Chasing Shadows</title>
+	<link rel="stylesheet" type="text/css" href="css/CSGalleryMaker.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="lib/packery.pkgd.min.js"></script>
+</head>
+
+<body>
+
+	<h2>Chasing Shadows</h2>
+	<button>Edit existing gallery</button>
+	<button>Add new gallery</button>
+
+	<div id="container">
+
+		<ul id="galleries">
+			<li id="anna" class="galleryThumb">
+				<div>
+					<h4>Anna von</h4>
+				</div>
+			</li>
+			<li id="albany" class="galleryThumb">
+				<div>
+					<h4>Albany</h4>
+				</div>
+			</li>
+			<li id="omar" class="galleryThumb">
+				<div>
+					<h4>Omar</h4>
+				</div>
+			</li>
+			<li id="trees" class="galleryThumb">
+				<div>
+					<h4>Trees</h4>
+				</div>
+			</li>
+			<li id="norway" class="galleryThumb">
+				<div>
+					<h4>Norway</h4>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+
+	<script type="text/javascript">
+		$(function() {
+			// $('#galleries').sortable({
+			// 	revert: true
+			// });
+			// $('#galleries').disableSelection();
+
+			var $galleries = $('#galleries').packery({
+				itemSelector: '.galleryThumb',
+				gutter: 10
+			});
+
+			var $galleryThumbs = $('#galleries .galleryThumb').draggable();
+			$galleries.packery('bindUIDraggableEvents', $galleryThumbs);
+
+		});
+	</script>
+
+</body>
+</html>
+
+
+
+

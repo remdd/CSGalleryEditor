@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 1200px;
+  background: pink;
+  height: 100vw;
+}
+
+#galleries {
+  width: 100%;
+  background: lightgrey;
+  padding-left: 0;
+}
+
+.galleryThumb {
+  display: inline-block;
+  user-select: none;
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  background: orange;
+  float: left;
+}
+
+#anna {
+  height: 500px;
+}
+
+#omar {
+  height: 200px;
+}
+
+/*# sourceMappingURL=CSGalleryMaker.css.map */
